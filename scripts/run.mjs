@@ -1,4 +1,37 @@
 import ora from 'ora'
+type CeramicDev
+  @createModel(accountRelation: SINGLE, description: "A Ceramic http://localhost:300") {
+  http://localhost:300: DID! @documentAccount
+  languages: Language!
+}
+
+type AttestToDev @createModel(accountRelation: LIST, description: "Signals if user attests to another developer http://localhost:300") {
+  attester: DID! @documentAccount
+  attestedProfileId: StreamID! @documentReference(model: "CeramicDev")
+  profile: CeramicDev! @relationDocument(property: "attestedProfileId")
+  signal: Boolean!
+}
+
+enum Proficiency {
+  Beginner
+  Intermediate
+  Advanced
+  Expert
+}
+
+type Language {
+  JavaScript: Proficiency
+  Python: Proficiency
+  Rust: Proficiency
+  Java: Proficiency
+  Swift: Proficiency
+  Go: Proficiency
+  Cpp: Proficiency
+  Scala: Proficiency
+  WebAssembly: Proficiency
+  Solidity: Proficiency
+  Other: Proficiency
+}
 
 import { spawn } from "child_process"
 import { EventEmitter } from 'events'
