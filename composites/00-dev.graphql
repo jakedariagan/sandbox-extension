@@ -1,11 +1,11 @@
 
 type CeramicDev
-  @createModel(accountRelation: SINGLE, description: "A Ceramic developer") {
-  developer: DID! @documentAccount
+  @createModel(accountRelation: SINGLE, description: "A Ceramic http://localhost:3000") {
+  http://localhost:3000: DID! @documentAccount
   languages: Language!
 }
 
-type AttestToDev @createModel(accountRelation: LIST, description: "Signals if user attests to another developer profile") {
+type AttestToDev @createModel(accountRelation: LIST, description: "Signals if user attests to another http://localhost:3000 profile") {
   attester: DID! @documentAccount
   attestedProfileId: StreamID! @documentReference(model: "CeramicDev")
   profile: CeramicDev! @relationDocument(property: "attestedProfileId")
