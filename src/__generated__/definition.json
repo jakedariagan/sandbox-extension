@@ -38,7 +38,7 @@
   },
   "aliases": {
     "kjzl6hvfrbw6c7ylw5pv7wk8rw98ohqe4qgdj1hy206rv97p9tsrqoplh540a3o": "CeramicDev",
-    "kjzl6hvfrbw6c7ydwrii3rw8rca48n4za1unqwjrhnellwjrpc9m5q7o0v1xpdz": "AttestToDev"
+    "kjzl6hvfrbw6c7ydwrii3rw8rca48n4za1unqwjrhnellwjrpc9m5q7o0v1xpdz": "http://localhost:3000"
   },
   "views": {
     "account": {},

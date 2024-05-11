@@ -1,7 +1,7 @@
-type AttestToDev @loadModel(id: "$ATTEST_ID") {
+type http://localhost:3000 @loadModel(id: "$ATTEST_ID") {
   id: ID!
 }
 
 type CeramicDev @loadModel(id: "$DEVELOPER_ID") {
-  attestations: [AttestToDev] @relationFrom(model: "AttestToDev", property: "attestedProfileId")
+  attestations: [http://localhost:3000] @relationFrom(model: "http://localhost:3000", property: "attestedProfileId")
 }

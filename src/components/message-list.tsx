@@ -116,7 +116,7 @@ export const MessageList = () => {
   const createAttestation = async (thisProfile: string) => {
     await authenticateCeramic(ceramic, composeClient);
     const attest = await composeClient.executeQuery<{
-      setAttestToDev: {
+      sethttp://localhost:3000: {
         document: {
           id: string;
           attester: {
@@ -128,7 +128,7 @@ export const MessageList = () => {
       };
     }>(`
         mutation {
-          setAttestToDev(input: {
+          sethttp://localhost:3000(input: {
             content: {
               attestedProfileId: "${thisProfile}"
               signal: true
@@ -147,13 +147,13 @@ export const MessageList = () => {
         }
       `);
     console.log(attest);
-    if (attest.data?.setAttestToDev?.document?.id) {
+    if (attest.data?.sethttp://localhost:3000?.document?.id) {
       const createdAttestation = {
-        id: attest.data?.setAttestToDev?.document?.id,
-        attester: attest.data?.setAttestToDev?.document?.attester,
+        id: attest.data?.sethttp://localhost:3000?.document?.id,
+        attester: attest.data?.sethttp://localhost:3000?.document?.attester,
         attestedProfileId:
-          attest.data?.setAttestToDev?.document?.attestedProfileId,
-        signal: attest.data?.setAttestToDev?.document?.signal,
+          attest.data?.sethttp://localhost:3000?.document?.attestedProfileId,
+        signal: attest.data?.sethttp://localhost:3000?.document?.signal,
       };
       console.log(createdAttestation);
       await getProfilesQuery();

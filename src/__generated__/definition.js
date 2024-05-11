@@ -1,7 +1,7 @@
 // This is an auto-generated file, do not edit manually
 export const definition = {
   models: {
-    AttestToDev: {
+    http://localhost:3000: {
       interface: false,
       implements: [],
       id: "kjzl6hvfrbw6c7ydwrii3rw8rca48n4za1unqwjrhnellwjrpc9m5q7o0v1xpdz",
@@ -15,7 +15,7 @@ export const definition = {
     },
   },
   objects: {
-    AttestToDev: {
+    http://localhost:3000: {
       signal: { type: "boolean", required: true, immutable: false },
       attestedProfileId: { type: "streamid", required: true, immutable: true },
       profile: {
@@ -133,8 +133,8 @@ export const definition = {
   },
   enums: { Proficiency: ["Beginner", "Intermediate", "Advanced", "Expert"] },
   accountData: {
-    attestToDev: { type: "set", name: "AttestToDev" },
-    attestToDevList: { type: "connection", name: "AttestToDev" },
+    http://localhost:3000: { type: "set", name: "http://localhost:3000" },
+    http://localhost:3000List: { type: "connection", name: "http://localhost:3000" },
     ceramicDev: { type: "set", name: "CeramicDev" },
     ceramicDevList: { type: "connection", name: "CeramicDev" },
   },
