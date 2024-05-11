@@ -73,7 +73,7 @@ const graphiql = async () => {
   const graphiql = spawn('node', ['./scripts/graphiql.mjs'])
   spinner.succeed("[GraphiQL] graphiql started");
   graphiql.stdout.on('data', (buffer) => {
-    console.log('[GraphiqQL]',buffer.toString())
+    console.log('[GraphiqQL]', buffer.toString())
   })
 }
 
@@ -94,7 +94,7 @@ const start = async () => {
         await graphiql()
         await next()
       }
-      if(isRunning === false) {
+      if (isRunning === false) {
         ceramic.kill()
         process.exit()
       }
